@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D14F92D31BCBF4EA00C5D2EB /* AWUtilsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWUtilsMacro.h; sourceTree = "<group>"; };
 		D1AE99DB1BC26D6000692484 /* AWHelper_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWHelper_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AE99DF1BC26D6000692484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1AE99E11BC26D6000692484 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -179,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				D1AE9A141BC26DD900692484 /* AWHelper.h */,
+				D14F92D31BCBF4EA00C5D2EB /* AWUtilsMacro.h */,
 				D1AE9A151BC26DD900692484 /* AWHelperPrivate.h */,
 				D1AE9A161BC26DD900692484 /* AWHelperPrivate.m */,
 				D1AE9A171BC26DD900692484 /* AWRuntimeHelper.h */,
@@ -572,6 +574,7 @@
 				D1AE9A0A1BC26D6000692484 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1AE9A0B1BC26D6000692484 /* Build configuration list for PBXNativeTarget "AWHelper_DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +583,7 @@
 				D1AE9A0D1BC26D6000692484 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1AE9A0E1BC26D6000692484 /* Build configuration list for PBXNativeTarget "AWHelper_DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +592,7 @@
 				D1AE9A101BC26D6000692484 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
