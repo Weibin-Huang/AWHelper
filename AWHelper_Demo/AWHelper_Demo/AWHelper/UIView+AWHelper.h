@@ -21,7 +21,7 @@
 @property (nonatomic) CGFloat centerY;
 
 //移除所有的SubView
-- (void)removeAllSubviews;
+- (void)aw_removeAllSubviews;
 //避免控件模糊化
-- (void)expandFrameToIntegral;
+- (void)aw_expandFrameToIntegral;
 @end

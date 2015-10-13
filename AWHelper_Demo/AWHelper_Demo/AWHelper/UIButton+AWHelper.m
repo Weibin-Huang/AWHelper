@@ -9,7 +9,7 @@
 #import "UIButton+AWHelper.h"
 
 @implementation UIButton (AWHelper)
-- (void)setBackgroundColor:(UIColor *)color forState:(UIControlState)state{
+- (void)aw_setBackgroundColor:(UIColor *)color forState:(UIControlState)state{
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();

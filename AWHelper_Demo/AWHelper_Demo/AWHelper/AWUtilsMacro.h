@@ -23,7 +23,7 @@ green:((float)(((rgbValue) & 0x00FF00) >> 8))/255.0 \
 blue:((float)((rgbValue) & 0x0000FF))/255.0 \
 alpha:1.0]
 
-//use dlog to print while in debug model
+//用AWLog替代NSLog输出
 #ifdef DEBUG
 #   define AWLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else

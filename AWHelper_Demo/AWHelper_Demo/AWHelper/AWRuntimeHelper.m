@@ -10,7 +10,7 @@
 #include <execinfo.h>
 
 @implementation AWRuntimeHelper
-+(void)printCallStackWithCount:(NSUInteger)count{
++(void)aw_printCallStackWithCount:(NSUInteger)count{
     void * callStack[count];
     int i ,frames = backtrace(callStack, (int)count);
     char ** strs = backtrace_symbols(callStack, frames);

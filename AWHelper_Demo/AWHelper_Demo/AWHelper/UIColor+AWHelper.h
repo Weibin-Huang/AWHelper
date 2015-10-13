@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIColor (AWHelper)
-+ (UIColor *)colorWithRGBHex:(UInt32)hex;
-+ (UIColor *)colorWithRGBHex:(UInt32)hex alpha:(CGFloat)alpha;
++ (UIColor *)aw_colorWithRGBHex:(UInt32)hex;
++ (UIColor *)aw_colorWithRGBHex:(UInt32)hex alpha:(CGFloat)alpha;
 @end

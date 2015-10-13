@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (AWHelper)
-- (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay;
+- (void)aw_performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay;
 @end
