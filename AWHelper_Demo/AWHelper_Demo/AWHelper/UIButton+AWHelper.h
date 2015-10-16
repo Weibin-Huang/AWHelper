@@ -10,8 +10,6 @@
 
 @interface UIButton (AWHelper)
 
-//设置不同state的BackgroundColor
-
 - (void)aw_setBackgroundColor:(UIColor *)color forState:(UIControlState)state;
 
 @end

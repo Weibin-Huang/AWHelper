@@ -14,7 +14,11 @@
 +(NSString *)appVersion;
 
 +(NSString *)deviceModel;
-
+/**
+ *  is 
+ *
+ *  @return <#return value description#>
+ */
 +(BOOL)isJailBroken;
 
 +(NSString *)jailBreaker;
