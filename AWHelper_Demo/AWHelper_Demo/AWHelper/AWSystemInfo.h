@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface AWSystemInfo : NSObject
+
 +(NSString *)osVersion;
 
 +(NSString *)appVersion;
