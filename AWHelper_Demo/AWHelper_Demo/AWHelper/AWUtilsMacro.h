@@ -32,5 +32,22 @@ alpha:1.0]
 #   define AWLog(...)
 #endif
 
+//Declare Singleton
+#undef	AS_SINGLETON
+#define AS_SINGLETON( __class ) \
++ (__class *)sharedInstance;
+
+//Implement Singleton
+#undef	DEF_SINGLETON
+#define DEF_SINGLETON( __class ) \
++ (__class *)sharedInstance \
+{ \
+static dispatch_once_t once; \
+static __class * __singleton__; \
+dispatch_once( &once, ^{ __singleton__ = [[__class alloc] init]; } ); \
+return __singleton__; \
+}
+
+
 
 #endif /* AWUtilsMacro_h */
