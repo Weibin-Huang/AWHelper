@@ -19,5 +19,9 @@
 #import "NSSet+AWHelper.h"
 #import "UIColor+AWHelper.h"
 #import "AWUtilsMacro.h"
+#import "UIView+RoundedCorners.h"
+#import "NSJSONSerialization+AWHelper.h"
+#import "NSMutableAttributedString+AWHelper.h"
+
 #endif
   

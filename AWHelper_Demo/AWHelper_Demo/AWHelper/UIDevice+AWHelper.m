@@ -1,0 +1,198 @@
+//
+//  UIDevice+AWHelper.m
+//  AWHelper_Demo
+//
+//  Created by AlanWong on 15/10/20.
+//  Copyright © 2015年 AlanWong. All rights reserved.
+//
+
+#import "UIDevice+AWHelper.h"
+#import "OpenUDID.h"
+#import "NSString+AWHelper.h"
+#include <sys/types.h>
+#include <sys/sysctl.h>
+#include <sys/socket.h>
+#include <net/if.h>
+#include <net/if_dl.h>
+@implementation UIDevice (AWHelper)
+
+
++ (UIDeviceType)currentDeviceType {
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        //iPad
+        if ([self isHighResolutionDevice]) {
+            return UIDeviceType_iPadRetina;
+        }
+        return UIDeviceType_iPadStandard;
+    }
+    else {
+        //iPhone
+        if ([self isHighResolutionDevice]) {
+            CGSize result = [[UIScreen mainScreen] bounds].size;
+            result = CGSizeMake(result.width * [UIScreen mainScreen].scale, result.height * [UIScreen mainScreen].scale);
+            if (result.height == 960.0f) {
+                return UIDeviceType_iPhoneRetina;
+            } else if (result.height == 1136.0f) {
+                return UIDeviceType_iPhone5;
+            } else if (result.height == 1334.0f) {
+                return UIDeviceType_iPhone6;
+            } else if (result.height == 2208.0f) {
+                return UIDeviceType_iPhone6Plus;
+            }
+        }
+        
+        return UIDeviceType_iPhoneStandard;
+    }
+    
+}
+
++ (BOOL)isRunningOveriPhone5 {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        return [self currentDeviceType] >= UIDeviceType_iPhone5;
+    }
+    return NO;
+}
+
++ (BOOL)isRunningOveriPhone6 {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        return [self currentDeviceType] >= UIDeviceType_iPhone6;
+    }
+    return NO;
+}
+
++ (BOOL)isRunningAtiPhone6Plus {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        return [self currentDeviceType] == UIDeviceType_iPhone6Plus;
+    }
+    return NO;
+}
+
++ (BOOL)isiPadDevice {
+    return UIUserInterfaceIdiomPad == [UIDevice currentDevice].userInterfaceIdiom;
+}
+
++ (BOOL)isiPhoneDevice {
+    return UIUserInterfaceIdiomPhone == [UIDevice currentDevice].userInterfaceIdiom;
+}
+
++ (BOOL)isHighResolutionDevice {
+    return ([UIScreen mainScreen].scale + 0.01) > 2.0;
+}
+
++ (BOOL)isAboveiOSVersion:(float)version
+{
+    return [[[UIDevice currentDevice] systemVersion] floatValue] >= version;
+}
+
++ (NSString *)platform {
+    size_t size;
+    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+    char *machine = malloc(size);
+    sysctlbyname("hw.machine", machine, &size, NULL, 0);
+    NSString *platform = [NSString stringWithCString:machine encoding:NSUTF8StringEncoding];
+    free(machine);
+    return platform;
+}
+
++ (NSString *)macAddress {
+    int mib[6];
+    size_t len;
+    char *buf;
+    unsigned char *ptr;
+    struct if_msghdr *ifm;
+    struct sockaddr_dl *sdl;
+    
+    mib[0] = CTL_NET;
+    mib[1] = AF_ROUTE;
+    mib[2] = 0;
+    mib[3] = AF_LINK;
+    mib[4] = NET_RT_IFLIST;
+    
+    if ((mib[5] = if_nametoindex("en0")) == 0) {
+        printf("Error: if_nametoindex error/n");
+        return @"";
+    }
+    
+    if (sysctl(mib, 6, NULL, &len, NULL, 0) < 0) {
+        printf("Error: sysctl, take 1/n");
+        return @"";
+    }
+    
+    if ((buf = malloc(len)) == NULL) {
+        printf("Could not allocate memory. error!/n");
+        return @"";
+    }
+    
+    if (sysctl(mib, 6, buf, &len, NULL, 0) < 0) {
+        printf("Error: sysctl, take 2");
+        return @"";
+    }
+    
+    ifm = (struct if_msghdr *)buf;
+    sdl = (struct sockaddr_dl *)(ifm + 1);
+    ptr = (unsigned char *)LLADDR(sdl);
+    NSString *outstring = [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x", *ptr, *(ptr + 1), *(ptr + 2), *(ptr + 3), *(ptr + 4), *(ptr + 5)];
+    free(buf);
+    return [outstring uppercaseString];
+}
+
++ (NSString *)macAddressWithColon {
+    int mib[6];
+    size_t len;
+    char *buf;
+    unsigned char *ptr;
+    struct if_msghdr *ifm;
+    struct sockaddr_dl *sdl;
+    
+    mib[0] = CTL_NET;
+    mib[1] = AF_ROUTE;
+    mib[2] = 0;
+    mib[3] = AF_LINK;
+    mib[4] = NET_RT_IFLIST;
+    
+    if ((mib[5] = if_nametoindex("en0")) == 0) {
+        printf("Error: if_nametoindex error/n");
+        return @"";
+    }
+    
+    if (sysctl(mib, 6, NULL, &len, NULL, 0) < 0) {
+        printf("Error: sysctl, take 1/n");
+        return @"";
+    }
+    
+    if ((buf = malloc(len)) == NULL) {
+        printf("Could not allocate memory. error!/n");
+        return @"";
+    }
+    
+    if (sysctl(mib, 6, buf, &len, NULL, 0) < 0) {
+        printf("Error: sysctl, take 2");
+        return @"";
+    }
+    
+    ifm = (struct if_msghdr *)buf;
+    sdl = (struct sockaddr_dl *)(ifm + 1);
+    ptr = (unsigned char *)LLADDR(sdl);
+    NSString *outstring = [NSString stringWithFormat:@"%02x:%02x:%02x:%02x:%02x:%02x", *ptr, *(ptr + 1), *(ptr + 2), *(ptr + 3), *(ptr + 4), *(ptr + 5)];
+    free(buf);
+    return [outstring uppercaseString];
+}
+
++ (NSString *)uniqueDeviceIdentifier {
+    NSString *openUDID = [OpenUDID value];
+    if (openUDID.length == 0) {
+        openUDID = @"000000000000";
+    }
+    if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0) {
+        //mac address
+        NSString *macAddress = [self macAddress];
+        if (macAddress.length > 0) {
+            openUDID = macAddress;
+        }
+    }
+    return [openUDID aw_MD5DigestKey];
+}
+
+
+@end
