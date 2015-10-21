@@ -7,8 +7,6 @@
 //
 
 #import "UIDevice+AWHelper.h"
-#import "OpenUDID.h"
-#import "NSString+AWHelper.h"
 #include <sys/types.h>
 #include <sys/sysctl.h>
 #include <sys/socket.h>
@@ -17,75 +15,75 @@
 @implementation UIDevice (AWHelper)
 
 
-+ (UIDeviceType)currentDeviceType {
++ (AWDeviceType)aw_currentDeviceType {
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         //iPad
-        if ([self isHighResolutionDevice]) {
-            return UIDeviceType_iPadRetina;
+        if ([self aw_isHighResolutionDevice]) {
+            return AWDeviceType_iPadRetina;
         }
-        return UIDeviceType_iPadStandard;
+        return AWDeviceType_iPadStandard;
     }
     else {
         //iPhone
-        if ([self isHighResolutionDevice]) {
+        if ([self aw_isHighResolutionDevice]) {
             CGSize result = [[UIScreen mainScreen] bounds].size;
             result = CGSizeMake(result.width * [UIScreen mainScreen].scale, result.height * [UIScreen mainScreen].scale);
             if (result.height == 960.0f) {
-                return UIDeviceType_iPhoneRetina;
+                return AWDeviceType_iPhoneRetina;
             } else if (result.height == 1136.0f) {
-                return UIDeviceType_iPhone5;
+                return AWDeviceType_iPhone5;
             } else if (result.height == 1334.0f) {
-                return UIDeviceType_iPhone6;
+                return AWDeviceType_iPhone6;
             } else if (result.height == 2208.0f) {
-                return UIDeviceType_iPhone6Plus;
+                return AWDeviceType_iPhone6Plus;
             }
         }
         
-        return UIDeviceType_iPhoneStandard;
+        return AWDeviceType_iPhoneStandard;
     }
     
 }
 
-+ (BOOL)isRunningOveriPhone5 {
++ (BOOL)aw_isRunningOveriPhone5 {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        return [self currentDeviceType] >= UIDeviceType_iPhone5;
+        return [self aw_currentDeviceType] >= AWDeviceType_iPhone5;
     }
     return NO;
 }
 
-+ (BOOL)isRunningOveriPhone6 {
++ (BOOL)aw_isRunningOveriPhone6 {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        return [self currentDeviceType] >= UIDeviceType_iPhone6;
+        return [self aw_currentDeviceType] >= AWDeviceType_iPhone6;
     }
     return NO;
 }
 
-+ (BOOL)isRunningAtiPhone6Plus {
++ (BOOL)aw_isRunningAtiPhone6Plus {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        return [self currentDeviceType] == UIDeviceType_iPhone6Plus;
+        return [self aw_currentDeviceType] == AWDeviceType_iPhone6Plus;
     }
     return NO;
 }
 
-+ (BOOL)isiPadDevice {
++ (BOOL)aw_isiPadDevice {
     return UIUserInterfaceIdiomPad == [UIDevice currentDevice].userInterfaceIdiom;
 }
 
-+ (BOOL)isiPhoneDevice {
++ (BOOL)aw_isiPhoneDevice {
     return UIUserInterfaceIdiomPhone == [UIDevice currentDevice].userInterfaceIdiom;
 }
 
-+ (BOOL)isHighResolutionDevice {
++ (BOOL)aw_isHighResolutionDevice {
     return ([UIScreen mainScreen].scale + 0.01) > 2.0;
 }
 
-+ (BOOL)isAboveiOSVersion:(float)version
++ (BOOL)aw_isAboveiOSVersion:(float)version
 {
     return [[[UIDevice currentDevice] systemVersion] floatValue] >= version;
 }
 
-+ (NSString *)platform {
++ (NSString *)aw_platform {
     size_t size;
     sysctlbyname("hw.machine", NULL, &size, NULL, 0);
     char *machine = malloc(size);
@@ -95,7 +93,7 @@
     return platform;
 }
 
-+ (NSString *)macAddress {
++ (NSString *)aw_macAddress {
     int mib[6];
     size_t len;
     char *buf;
@@ -137,7 +135,7 @@
     return [outstring uppercaseString];
 }
 
-+ (NSString *)macAddressWithColon {
++ (NSString *)aw_macAddressWithColon {
     int mib[6];
     size_t len;
     char *buf;
@@ -179,20 +177,6 @@
     return [outstring uppercaseString];
 }
 
-+ (NSString *)uniqueDeviceIdentifier {
-    NSString *openUDID = [OpenUDID value];
-    if (openUDID.length == 0) {
-        openUDID = @"000000000000";
-    }
-    if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0) {
-        //mac address
-        NSString *macAddress = [self macAddress];
-        if (macAddress.length > 0) {
-            openUDID = macAddress;
-        }
-    }
-    return [openUDID aw_MD5DigestKey];
-}
 
 
 @end

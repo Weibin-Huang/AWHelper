@@ -22,7 +22,7 @@
     [self.view addSubview:_testView];
     _testView.center = CGPointMake(self.view.width / 2, self.view.height / 2);
     
-    [_testView setRoundedCorners:UIRectCornerAllCorners radius:_testView.width /2];
+    [_testView aw_setRoundedCorners:UIRectCornerAllCorners radius:_testView.width /2];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

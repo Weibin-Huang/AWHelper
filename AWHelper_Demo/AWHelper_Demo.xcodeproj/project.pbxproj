@@ -10,8 +10,6 @@
 		D11043B01BD5525500AE98F0 /* NSJSONSerialization+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D11043AF1BD5525500AE98F0 /* NSJSONSerialization+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
 		D11043B31BD5595D00AE98F0 /* NSMutableAttributedString+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D11043B21BD5595D00AE98F0 /* NSMutableAttributedString+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
 		D11043B91BD55D0100AE98F0 /* UIDevice+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D11043B81BD55D0100AE98F0 /* UIDevice+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
-		D11043BD1BD55E7600AE98F0 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = D11043BC1BD55E7600AE98F0 /* OpenUDID.m */; settings = {ASSET_TAGS = (); }; };
-		D11043C01BD55EFF00AE98F0 /* NSString+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D11043BF1BD55EFF00AE98F0 /* NSString+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
 		D18D18021BD51F03000A795A /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = D18D18011BD51F03000A795A /* UIView+RoundedCorners.m */; settings = {ASSET_TAGS = (); }; };
 		D1AE99E01BC26D6000692484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE99DF1BC26D6000692484 /* main.m */; };
 		D1AE99E31BC26D6000692484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE99E21BC26D6000692484 /* AppDelegate.m */; };
@@ -58,10 +56,6 @@
 		D11043B21BD5595D00AE98F0 /* NSMutableAttributedString+AWHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+AWHelper.m"; sourceTree = "<group>"; };
 		D11043B71BD55D0100AE98F0 /* UIDevice+AWHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+AWHelper.h"; sourceTree = "<group>"; };
 		D11043B81BD55D0100AE98F0 /* UIDevice+AWHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+AWHelper.m"; sourceTree = "<group>"; };
-		D11043BB1BD55E7600AE98F0 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
-		D11043BC1BD55E7600AE98F0 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
-		D11043BE1BD55EFF00AE98F0 /* NSString+AWHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AWHelper.h"; sourceTree = "<group>"; };
-		D11043BF1BD55EFF00AE98F0 /* NSString+AWHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AWHelper.m"; sourceTree = "<group>"; };
 		D14F92D31BCBF4EA00C5D2EB /* AWUtilsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWUtilsMacro.h; sourceTree = "<group>"; };
 		D18D18001BD51F03000A795A /* UIView+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorners.h"; sourceTree = "<group>"; };
 		D18D18011BD51F03000A795A /* UIView+RoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedCorners.m"; sourceTree = "<group>"; };
@@ -131,15 +125,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D11043BA1BD55E7600AE98F0 /* ThirdPart */ = {
-			isa = PBXGroup;
-			children = (
-				D11043BB1BD55E7600AE98F0 /* OpenUDID.h */,
-				D11043BC1BD55E7600AE98F0 /* OpenUDID.m */,
-			);
-			path = ThirdPart;
-			sourceTree = "<group>";
-		};
 		D1AE99D21BC26D6000692484 = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +191,6 @@
 		D1AE9A131BC26DD900692484 /* AWHelper */ = {
 			isa = PBXGroup;
 			children = (
-				D11043BA1BD55E7600AE98F0 /* ThirdPart */,
 				D1AE9A141BC26DD900692484 /* AWHelper.h */,
 				D14F92D31BCBF4EA00C5D2EB /* AWUtilsMacro.h */,
 				D1AE9A151BC26DD900692484 /* AWHelperPrivate.h */,
@@ -239,8 +223,6 @@
 				D11043B21BD5595D00AE98F0 /* NSMutableAttributedString+AWHelper.m */,
 				D11043B71BD55D0100AE98F0 /* UIDevice+AWHelper.h */,
 				D11043B81BD55D0100AE98F0 /* UIDevice+AWHelper.m */,
-				D11043BE1BD55EFF00AE98F0 /* NSString+AWHelper.h */,
-				D11043BF1BD55EFF00AE98F0 /* NSString+AWHelper.m */,
 			);
 			path = AWHelper;
 			sourceTree = "<group>";
@@ -377,7 +359,6 @@
 			files = (
 				D1AE9A351BC26DD900692484 /* UIView+AWHelper.m in Sources */,
 				D1AE9A2D1BC26DD900692484 /* AWSystemInfo.m in Sources */,
-				D11043BD1BD55E7600AE98F0 /* OpenUDID.m in Sources */,
 				D1AE9A2C1BC26DD900692484 /* AWRuntimeHelper.m in Sources */,
 				D11043B91BD55D0100AE98F0 /* UIDevice+AWHelper.m in Sources */,
 				D1AE99E61BC26D6000692484 /* ViewController.m in Sources */,
@@ -388,7 +369,6 @@
 				D1AE9A2F1BC26DD900692484 /* NSDictionary+AWHelper.m in Sources */,
 				D1AE99E31BC26D6000692484 /* AppDelegate.m in Sources */,
 				D1AE9A331BC26DD900692484 /* UIButton+AWHelper.m in Sources */,
-				D11043C01BD55EFF00AE98F0 /* NSString+AWHelper.m in Sources */,
 				D1AE9A341BC26DD900692484 /* UIColor+AWHelper.m in Sources */,
 				D1AE99E01BC26D6000692484 /* main.m in Sources */,
 				D1AE9A311BC26DD900692484 /* NSObject+AWHelper.m in Sources */,
