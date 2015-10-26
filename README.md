@@ -5,8 +5,8 @@
 
 
 ## 更新
-###1.0.0
-* 第一个版本API比较少，部分代码是从CYHelper复制过来
+###1.1.0
+* 新增AWUtilsMacro.h，提供常用的宏
 
 历史更新信息请查看 [UpdateHistory.md](https://github.com/Weibin-Huang/AWHelper/blob/master/UpdateHistory)
 
