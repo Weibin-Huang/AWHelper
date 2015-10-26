@@ -42,6 +42,8 @@ typedef NS_ENUM(NSUInteger ,AWDeviceType){
  */
 + (AWDeviceType)aw_currentDeviceType;
 
+
+
 /**
  *  当前是否运行在iPhone5以上的设备，包括iPhone5
  *
