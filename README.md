@@ -7,6 +7,10 @@
 ## 更新
 ###1.1.0
 * 新增AWUtilsMacro.h，提供常用的宏
+* 新增UIView+RoundedCorners.h，提供UIView设置圆角的方法
+* 新增NSJSONSerialization+AWHelper.h，提供JSONString与JSONObject快捷转化的方法
+* 新增NSMutableAttributedString+AWHelper.h，提供NSMutableAttributedString快捷设置属性的方法
+* 新增UIDevice+AWHelper.h，提供UIDevice读取设备相关信息的方法
 
 历史更新信息请查看 [UpdateHistory.md](https://github.com/Weibin-Huang/AWHelper/blob/master/UpdateHistory)
 
