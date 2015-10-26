@@ -12,7 +12,7 @@
 * 新增NSMutableAttributedString+AWHelper.h，提供NSMutableAttributedString快捷设置属性的方法
 * 新增UIDevice+AWHelper.h，提供UIDevice读取设备相关信息的方法
 
-历史更新信息请查看 [UpdateHistory.md](https://github.com/Weibin-Huang/AWHelper/blob/master/UpdateHistory)
+历史更新信息请查看 [UpdateHistory.md](https://github.com/Weibin-Huang/AWHelper/blob/master/UpdateHistory.md)
 
 
 ## 使用
