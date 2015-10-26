@@ -111,13 +111,13 @@
 
 
 #pragma mark - Function Methods
-- (void)removeAllSubviews
+- (void)aw_removeAllSubviews
 {
     for (UIView *subview in self.subviews) {
         [subview removeFromSuperview];
     }
 }
-- (void)expandFrameToIntegral{
+- (void)aw_expandFrameToIntegral{
     self.frame = CGRectIntegral(self.frame);
 }
 

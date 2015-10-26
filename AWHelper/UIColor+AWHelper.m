@@ -9,12 +9,12 @@
 #import "UIColor+AWHelper.h"
 
 @implementation UIColor (AWHelper)
-+ (UIColor *)colorWithRGBHex:(UInt32)hex
++ (UIColor *)aw_colorWithRGBHex:(UInt32)hex
 {
-    return [UIColor colorWithRGBHex:hex alpha:1.0f];
+    return [UIColor aw_colorWithRGBHex:hex alpha:1.0f];
 }
 
-+ (UIColor *)colorWithRGBHex:(UInt32)hex alpha:(CGFloat)alpha
++ (UIColor *)aw_colorWithRGBHex:(UInt32)hex alpha:(CGFloat)alpha
 {
     int r = (hex >> 16) & 0xFF;
     int g = (hex >> 8) & 0xFF;

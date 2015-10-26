@@ -9,7 +9,7 @@
 #import "NSObject+AWHelper.h"
 
 @implementation NSObject (AWHelper)
-- (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay
+- (void)aw_performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay
 {
     block = [block copy];
     [self performSelector:@selector(runBlockAfterDelay:) withObject:block afterDelay:delay];

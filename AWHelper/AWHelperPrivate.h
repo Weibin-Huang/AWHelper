@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @interface AWHelperPrivate : NSObject
+
 +(id)aw_filterCollection:(id)collection
                    block:(BOOL (^)(id value))handleBlock
             filterToggle:(BOOL)toggle;

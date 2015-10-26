@@ -20,8 +20,10 @@
 @property (nonatomic) CGFloat centerX;
 @property (nonatomic) CGFloat centerY;
 
-//移除所有的SubView
-- (void)removeAllSubviews;
-//避免控件模糊化
-- (void)expandFrameToIntegral;
+- (void)aw_removeAllSubviews;
+
+/**
+ *  avoid the view to be blur
+ */
+- (void)aw_expandFrameToIntegral;
 @end

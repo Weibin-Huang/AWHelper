@@ -14,7 +14,7 @@
 
 #pragma mark - Instance Methods
 
--(void)associaValue:(id)value withKey:(const void *)key{
+- (void)associateValue:(id)value withKey:(const void *)key {
     objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

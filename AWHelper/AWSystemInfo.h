@@ -9,12 +9,17 @@
 #import <Foundation/Foundation.h>
 
 @interface AWSystemInfo : NSObject
+
 +(NSString *)osVersion;
 
 +(NSString *)appVersion;
 
 +(NSString *)deviceModel;
-
+/**
+ *  is 
+ *
+ *  @return <#return value description#>
+ */
 +(BOOL)isJailBroken;
 
 +(NSString *)jailBreaker;

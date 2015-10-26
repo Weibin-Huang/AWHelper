@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSSet (AWHelper)
-
+- (NSSet *)map:(id (^)(id value))handlerBlock;
+- (NSSet *)filter:(BOOL (^)(id value))handlerBlock;
+- (NSSet *)reject:(BOOL (^)(id value))handlerBlock ;
 @end
