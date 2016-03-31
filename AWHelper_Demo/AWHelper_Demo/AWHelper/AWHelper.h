@@ -8,6 +8,7 @@
 
 #ifdef __OBJC__
 #import "UIView+AWHelper.h"
+#import "AWUtilsMacro.h"
 #import "UIButton+AWHelper.h"
 #import "NSDictionary+AWHelper.h"
 #import "NSArray+AWHelper.h"
@@ -18,10 +19,10 @@
 #import "NSObject+AWHelper.h"
 #import "NSSet+AWHelper.h"
 #import "UIColor+AWHelper.h"
-#import "AWUtilsMacro.h"
 #import "UIView+RoundedCorners.h"
 #import "NSJSONSerialization+AWHelper.h"
 #import "NSMutableAttributedString+AWHelper.h"
+#import "UIDevice+AWHelper.h"
 
 #endif
   
