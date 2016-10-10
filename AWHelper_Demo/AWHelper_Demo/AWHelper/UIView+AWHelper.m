@@ -121,5 +121,19 @@
     self.frame = CGRectIntegral(self.frame);
 }
 
+- (NSLayoutConstraint *)aw_constraintForFirstAttribute:(NSLayoutAttribute)firstAttribute withRelation:(NSLayoutRelation)relation{
+    NSLayoutConstraint * result = nil;
+    for (NSLayoutConstraint *constraint in self.constraints) {
+        if (constraint.firstAttribute == firstAttribute) {
+            if (constraint.relation == relation) {
+                result = constraint;
+                break;
+            }
+        }
+    }
+    return result;
+}
+
+
 
 @end

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D11043B01BD5525500AE98F0 /* NSJSONSerialization+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D11043AF1BD5525500AE98F0 /* NSJSONSerialization+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
-		D11043B31BD5595D00AE98F0 /* NSMutableAttributedString+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D11043B21BD5595D00AE98F0 /* NSMutableAttributedString+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
-		D11043B91BD55D0100AE98F0 /* UIDevice+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D11043B81BD55D0100AE98F0 /* UIDevice+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
-		D18D18021BD51F03000A795A /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = D18D18011BD51F03000A795A /* UIView+RoundedCorners.m */; settings = {ASSET_TAGS = (); }; };
+		D11043B01BD5525500AE98F0 /* NSJSONSerialization+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D11043AF1BD5525500AE98F0 /* NSJSONSerialization+AWHelper.m */; };
+		D11043B31BD5595D00AE98F0 /* NSMutableAttributedString+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D11043B21BD5595D00AE98F0 /* NSMutableAttributedString+AWHelper.m */; };
+		D11043B91BD55D0100AE98F0 /* UIDevice+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D11043B81BD55D0100AE98F0 /* UIDevice+AWHelper.m */; };
+		D18D18021BD51F03000A795A /* UIView+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = D18D18011BD51F03000A795A /* UIView+RoundedCorners.m */; };
 		D1AE99E01BC26D6000692484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE99DF1BC26D6000692484 /* main.m */; };
 		D1AE99E31BC26D6000692484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE99E21BC26D6000692484 /* AppDelegate.m */; };
 		D1AE99E61BC26D6000692484 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE99E51BC26D6000692484 /* ViewController.m */; };
@@ -19,17 +19,16 @@
 		D1AE99EE1BC26D6000692484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1AE99EC1BC26D6000692484 /* LaunchScreen.storyboard */; };
 		D1AE99F91BC26D6000692484 /* AWHelper_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE99F81BC26D6000692484 /* AWHelper_DemoTests.m */; };
 		D1AE9A041BC26D6000692484 /* AWHelper_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A031BC26D6000692484 /* AWHelper_DemoUITests.m */; };
-		D1AE9A2B1BC26DD900692484 /* AWHelperPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A161BC26DD900692484 /* AWHelperPrivate.m */; settings = {ASSET_TAGS = (); }; };
-		D1AE9A2C1BC26DD900692484 /* AWRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A181BC26DD900692484 /* AWRuntimeHelper.m */; settings = {ASSET_TAGS = (); }; };
-		D1AE9A2D1BC26DD900692484 /* AWSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A1A1BC26DD900692484 /* AWSystemInfo.m */; settings = {ASSET_TAGS = (); }; };
-		D1AE9A2E1BC26DD900692484 /* NSArray+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A1C1BC26DD900692484 /* NSArray+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
-		D1AE9A2F1BC26DD900692484 /* NSDictionary+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A1E1BC26DD900692484 /* NSDictionary+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
-		D1AE9A301BC26DD900692484 /* NSObject+AssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A201BC26DD900692484 /* NSObject+AssociatedObjects.m */; settings = {ASSET_TAGS = (); }; };
-		D1AE9A311BC26DD900692484 /* NSObject+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A221BC26DD900692484 /* NSObject+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
-		D1AE9A321BC26DD900692484 /* NSSet+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A241BC26DD900692484 /* NSSet+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
-		D1AE9A331BC26DD900692484 /* UIButton+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A261BC26DD900692484 /* UIButton+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
-		D1AE9A341BC26DD900692484 /* UIColor+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A281BC26DD900692484 /* UIColor+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
-		D1AE9A351BC26DD900692484 /* UIView+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A2A1BC26DD900692484 /* UIView+AWHelper.m */; settings = {ASSET_TAGS = (); }; };
+		D1AE9A2B1BC26DD900692484 /* AWHelperPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A161BC26DD900692484 /* AWHelperPrivate.m */; };
+		D1AE9A2C1BC26DD900692484 /* AWRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A181BC26DD900692484 /* AWRuntimeHelper.m */; };
+		D1AE9A2D1BC26DD900692484 /* AWSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A1A1BC26DD900692484 /* AWSystemInfo.m */; };
+		D1AE9A2E1BC26DD900692484 /* NSArray+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A1C1BC26DD900692484 /* NSArray+AWHelper.m */; };
+		D1AE9A2F1BC26DD900692484 /* NSDictionary+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A1E1BC26DD900692484 /* NSDictionary+AWHelper.m */; };
+		D1AE9A301BC26DD900692484 /* NSObject+AssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A201BC26DD900692484 /* NSObject+AssociatedObjects.m */; };
+		D1AE9A321BC26DD900692484 /* NSSet+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A241BC26DD900692484 /* NSSet+AWHelper.m */; };
+		D1AE9A331BC26DD900692484 /* UIButton+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A261BC26DD900692484 /* UIButton+AWHelper.m */; };
+		D1AE9A341BC26DD900692484 /* UIColor+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A281BC26DD900692484 /* UIColor+AWHelper.m */; };
+		D1AE9A351BC26DD900692484 /* UIView+AWHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE9A2A1BC26DD900692484 /* UIView+AWHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +87,6 @@
 		D1AE9A1E1BC26DD900692484 /* NSDictionary+AWHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AWHelper.m"; sourceTree = "<group>"; };
 		D1AE9A1F1BC26DD900692484 /* NSObject+AssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AssociatedObjects.h"; sourceTree = "<group>"; };
 		D1AE9A201BC26DD900692484 /* NSObject+AssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObjects.m"; sourceTree = "<group>"; };
-		D1AE9A211BC26DD900692484 /* NSObject+AWHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AWHelper.h"; sourceTree = "<group>"; };
-		D1AE9A221BC26DD900692484 /* NSObject+AWHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AWHelper.m"; sourceTree = "<group>"; };
 		D1AE9A231BC26DD900692484 /* NSSet+AWHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+AWHelper.h"; sourceTree = "<group>"; };
 		D1AE9A241BC26DD900692484 /* NSSet+AWHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+AWHelper.m"; sourceTree = "<group>"; };
 		D1AE9A251BC26DD900692484 /* UIButton+AWHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AWHelper.h"; sourceTree = "<group>"; };
@@ -205,8 +202,6 @@
 				D1AE9A1E1BC26DD900692484 /* NSDictionary+AWHelper.m */,
 				D1AE9A1F1BC26DD900692484 /* NSObject+AssociatedObjects.h */,
 				D1AE9A201BC26DD900692484 /* NSObject+AssociatedObjects.m */,
-				D1AE9A211BC26DD900692484 /* NSObject+AWHelper.h */,
-				D1AE9A221BC26DD900692484 /* NSObject+AWHelper.m */,
 				D1AE9A231BC26DD900692484 /* NSSet+AWHelper.h */,
 				D1AE9A241BC26DD900692484 /* NSSet+AWHelper.m */,
 				D1AE9A251BC26DD900692484 /* UIButton+AWHelper.h */,
@@ -371,7 +366,6 @@
 				D1AE9A331BC26DD900692484 /* UIButton+AWHelper.m in Sources */,
 				D1AE9A341BC26DD900692484 /* UIColor+AWHelper.m in Sources */,
 				D1AE99E01BC26D6000692484 /* main.m in Sources */,
-				D1AE9A311BC26DD900692484 /* NSObject+AWHelper.m in Sources */,
 				D11043B31BD5595D00AE98F0 /* NSMutableAttributedString+AWHelper.m in Sources */,
 				D1AE9A2B1BC26DD900692484 /* AWHelperPrivate.m in Sources */,
 				D1AE9A301BC26DD900692484 /* NSObject+AssociatedObjects.m in Sources */,

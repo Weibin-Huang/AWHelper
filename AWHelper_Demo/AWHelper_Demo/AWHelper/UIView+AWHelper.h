@@ -26,4 +26,5 @@
  *  avoid the view to be blur
  */
 - (void)aw_expandFrameToIntegral;
+
 @end

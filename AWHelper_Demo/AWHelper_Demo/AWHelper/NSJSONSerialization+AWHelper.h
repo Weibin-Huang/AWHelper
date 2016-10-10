@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface NSJSONSerialization (AWHelper)
+
 + (id)JSONObjectWithData:(NSData *)data;
+
 + (NSData *)dataWithJSONObject:(id)jsonObject;
+
 + (NSString *)stringWithJSONObject:(id)jsonObject;
 @end

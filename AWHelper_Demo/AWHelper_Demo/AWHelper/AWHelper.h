@@ -16,7 +16,6 @@
 #import "AWSystemInfo.h"
 #import "AWRuntimeHelper.h"
 #import "NSObject+AssociatedObjects.h"
-#import "NSObject+AWHelper.h"
 #import "NSSet+AWHelper.h"
 #import "UIColor+AWHelper.h"
 #import "UIView+RoundedCorners.h"

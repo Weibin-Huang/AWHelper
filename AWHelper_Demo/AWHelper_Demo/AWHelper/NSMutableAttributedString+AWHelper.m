@@ -62,7 +62,6 @@
     [self addAttributes:@{NSParagraphStyleAttributeName: style} range:range];
 }
 
-// NSBaselineOffsetAttributeName
 - (void)aw_setBaselineOffset:(CGFloat)fOffset
 {
     [self aw_setBaselineOffset:fOffset range:NSMakeRange(0, self.string.length)];

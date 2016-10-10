@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @interface AWRuntimeHelper : NSObject
-+(void)aw_printCallStackWithCount:(NSUInteger)count;
+
++ (void)aw_printCallStackWithCount:(NSUInteger)count;
+
 @end
